@@ -1,0 +1,11 @@
+<div class="fixed-div" *ngIf="displayDeleteConfirm">
+  
+<div mat-dialog-content>
+  Are you sure you want to delete {{deleteCategoryId}}?
+</div>
+<div mat-dialog-actions>
+  <button (click)="deleteCategory()">Confirm</button>
+  <button (click)="hideConfirm()">Cancel</button>
+</div>
+
+

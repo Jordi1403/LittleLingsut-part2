@@ -1,0 +1,24 @@
+.create-category-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+ 
+  .create-category-container h3 {
+    margin-bottom: 10px;
+  }
+ 
+  .create-category-container form {
+    margin-bottom: 20px;
+  }
+ 
+  .create-category-container button {
+    margin-top: 10px;
+  }
+ 
+  .create-category-container h2 {
+    color: red;
+  }

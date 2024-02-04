@@ -1,0 +1,31 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ 
+.form-fields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+ 
+.form-fields mat-form-field {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+ 
+.added-words {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ 
+.added-words mat-form-field {
+    margin-bottom: 10px;
+}
+ 
+.form-actions {
+    margin-top: 20px;
+}
+ 

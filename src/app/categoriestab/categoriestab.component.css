@@ -1,0 +1,29 @@
+:host {
+  display: block;
+}
+
+.fixed-div {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.fixed-div p {
+  margin: 0 0 15px;
+}
+
+.fixed-div button {
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 5px;
+  background-color: #007bff;
+  color: #fff;
+}

@@ -1,0 +1,19 @@
+
+.h1littel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+    font: italic;
+    
+}
+.toolbar-icons {
+    flex : LEFT;
+}
+.toolbar-icon {
+    padding-left: 8px
+}

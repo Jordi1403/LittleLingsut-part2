@@ -1,0 +1,45 @@
+<div>
+  <h3>Create Category</h3>
+  <form style="margin: 30px;">
+    <mat-form-field>
+      <mat-label>Name:</mat-label>
+      <input #name type="text" required matInput>
+    </mat-form-field>
+
+    <br />
+    <mat-form-field>
+      <mat-label for="source">Source language:</mat-label>
+      <input #source type="text" value="English" readonly matInput>
+    </mat-form-field>
+
+    <br />
+    <mat-form-field>
+      <mat-label for="name">Target language:</mat-label>
+      <input #target type="text" value="Hebrew" readonly matInput>
+    </mat-form-field>
+    <br />
+    <mat-label>Words: <button mat-raised-button color="primary" (click)="OpenAddNewPair()">Create a new words pair</button></mat-label>
+    <br/>
+    <div *ngFor="let item of wordsPairs; let i = index;">
+      <form>
+        <mat-form-field  style="margin-right: 20px;">
+          <mat-label for="source">Source: </mat-label><input [(ngModel)]="item[0]" #sourceWord name="sourceWord" type="text"
+          required matInput>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label for="target">Target: </mat-label><input [(ngModel)]="item[1]" #targetWord name="targetWord" type="text"
+          required matInput>
+        </mat-form-field>
+        <button mat-icon-button  color="primary" (click)="deletePair(i)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </form>
+    </div>
+    <button mat-raised-button color="primary" (click)="createCategory(name.value, source.value, target.value)">Create</button>
+    <mat-error *ngIf="displayValidationNameMessage">Property 'name' is required</mat-error>
+    <mat-error *ngIf="displayValidationPairMessage">Property 'Source' and 'Target' is required</mat-error>
+    <mat-error *ngIf="displayValidationPairNullMessage">You need at least 1 words pair</mat-error>
+    <mat-error *ngIf="displayValidationOriginMessage">Source word need to be in English</mat-error>
+    <mat-error *ngIf="displayValidationTargetMessage">Target word need to be in Hebrew</mat-error>
+  </form>
+</div>
